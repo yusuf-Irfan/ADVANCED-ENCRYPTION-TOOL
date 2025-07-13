@@ -97,7 +97,7 @@ Browser (Google Chrome) – Used to run and interact with the tool
 
 --> Created a working tool that is both practical and industry-relevant, especially in fields like cybersecurity and data privacy
 
---> Strengthened problem-solving, testing, and debugging skills while handling real files (like PDFs containing study material)
+--> Strengthened problem-solving, testing, and debugging skills while handling real files (like PDFs containing study material
 
 *OUTPUT*
 
