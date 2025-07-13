@@ -99,6 +99,134 @@ Browser (Google Chrome) – Used to run and interact with the tool
 
 --> Strengthened problem-solving, testing, and debugging skills while handling real files (like PDFs containing study material
 
+
+Tool Overview:
+
+This tool is a Python-based security utility designed to encrypt and decrypt files using the AES-256 (Advanced Encryption Standard with 256-bit key) encryption algorithm.
+
+It ensures high-level data confidentiality and is ideal for securing sensitive files from unauthorized access.
+
+The tool can be operated via a simple command-line interface (CLI) or integrated into larger applications.
+
+
+Security Features:
+
+Symmetric Encryption: Same key is used for both encryption and decryption.
+
+Key Derivation: Uses a password-based key derivation function (PBKDF2) to securely generate the key from user input.
+
+Random Salt & IV: Each encryption generates a random salt and initialization vector (IV) to prevent pattern recognition and replay attacks.
+
+Secure Storage: Encrypted files store the salt and IV prepended, so decryption can be done later even on different systems.
+
+
+File Support:
+
+Can encrypt and decrypt any file type including text files, images, PDFs, and even executable files.
+
+Supports both small and large files, with no size restrictions other than system memory limits.
+
+
+
+Technical Stack:
+
+Language: Python 3
+
+Libraries Used:
+
+cryptography: for AES encryption operations.
+
+hashlib: for hashing and key derivation.
+
+os: for file operations and secure random number generation.
+
+base64: for encoding and decoding key data.
+
+getpass: for securely receiving passwords without displaying on screen.
+
+
+
+
+User Inputs:
+
+Password: The user provides a strong password which is not stored anywhere, used to generate a secure key.
+
+File Path: The path to the file that needs to be encrypted or decrypted.
+
+Operation Mode: User can choose between 'Encrypt' or 'Decrypt'.
+
+
+
+Workflow:
+
+Encryption Process:
+
+1. User provides the target file and a password.
+
+
+2. A salt and IV are generated using a secure random function.
+
+
+3. The key is derived using PBKDF2 with the salt.
+
+
+4. The file content is encrypted using AES in CBC mode.
+
+
+5. The salt, IV, and ciphertext are combined and saved as a new encrypted file.
+
+
+
+Decryption Process:
+
+1. The tool extracts salt and IV from the encrypted file.
+
+
+2. It re-derives the key using the password and extracted salt.
+
+
+3. AES decrypts the content using the key and IV.
+
+
+4. Decrypted content is saved as the original file.
+
+
+
+
+
+Output Files:
+
+Encrypted files typically have an extension like .enc or .aes.
+
+Decrypted files are restored to their original format and file name.
+
+
+
+Use Cases:
+
+Protect confidential documents (e.g., financial records, legal files).
+
+Secure personal information on shared or cloud systems.
+
+Send encrypted files via email or USB drive safely.
+
+Use in penetration testing or cybersecurity learning projects.
+
+
+
+Benefits:
+
+High-grade security using AES-256.
+
+Offline usage, no internet required.
+
+Cross-platform, works on Windows, Linux, and macOS.
+
+Simple interface, ideal for both beginners and professionals.
+
+Open-source, customizable for different use cases.
+
+
 *OUTPUT*
 
 "https://github.com/user-attachments/assets/37757eef-cff5-4489-897f-aa2291fce421" />
